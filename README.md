@@ -35,11 +35,13 @@ Terminaalin seuraavat ajetaan komennot:
     "singleQuote": true,
     "trailingComma": "es5",
     "printWidth": 79,
-    "proseWrap": "always",
+    "proseWrap": "always", // voi siirtää pitkät rivit alaspäin
     "bracketSpacing": false,
     "plugins": ["prettier-plugin-svelte"],
     "overrides": [{"files": "*.svelte", "options": {"parser": "svelte"}}]
 }
+
+*Aja `npx prettier -w .`
 
 
 
