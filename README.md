@@ -21,7 +21,7 @@ Terminaali ikkuna
 
 Terminaalin seuraavat ajetaan komennot:
 
-1: `cd kauppa`
+1: `cd kauppalista`
 2: `npm install`
 3: `git init` && `git add -A` && `git commit -m "Initial commit" `(optional)
 4: `npm run dev -- --open`
@@ -41,7 +41,11 @@ Terminaalin seuraavat ajetaan komennot:
     "overrides": [{"files": "*.svelte", "options": {"parser": "svelte"}}]
 }
 
-*Aja `npx prettier -w .`
+* Aja `npx prettier -w .`
+
+- Voidaan ajata `npm run` => `npm run format`=> `npm run dev`
+
+
 
 
 

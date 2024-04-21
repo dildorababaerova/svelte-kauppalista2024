@@ -1,43 +1,27 @@
 <script>
-    let jutut  = ["Leipä", "Tee", "Voi"]
-
-let uusiAsia = '';
-
-function lisääAsia() {
-    jutut.push(uusiAsia);
-    jutut = jutut;
-    uusiAsia = '';
-}
+    const listat = ['Kahvi', 'Ananas', 'Mango' ];
 </script>
 
-<div class= "komponentti">
+<div>
 <h1>Kauppalista</h1>
-<ul>
-    {#each jutut as juttu}
-        <li>{juttu}</li>
-    {/each}
-</ul>
-<form class="uusi">
-    <label for="uusi-asia">Lisää uusi asia</label>
-    <br>
-    <input id="uusi-asia" type="text" bind:value={uusiAsia} />
-    <button on:click|preventDefault={lisääAsia}>Lisää</button>
-</form>
-
+    <ul>
+        {#each listat as lista}
+        <li>{lista}</li>
+        {/each}
+    </ul>
 </div>
 <style>
     h1 {
-        background-color: hwb(221 48% 26% / 0.911);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: aqua;
+        color:blue;
+        font-size: 200%;
     }
     ul {
-        color: blueviolet;
-        font-size: 200%;
-        background-color: bisque;
+        color: #8a2be2;
+        background-color: rgba(96, 224, 213, 0.556);
+        font-size: 100%;
     }
 
 </style>
 
- 
 
-    
