@@ -1,14 +1,9 @@
 <script>
+import { enhance } from '$app/forms';
+   
     export let data; 
+    export let form;
 
-let newList = '';
-
-function addList() {
-    if (!newList) return;
-    data.lists.push(newList);
-    data = data;
-    newList = '';
-}
 </script>
 
 <div class komponentti>
@@ -21,14 +16,17 @@ function addList() {
         </li>
         {/each}
     </ul>
-    <form class="new" method="POST">
+    {#if form?.error}
+		<p class="error">{form.error}</p>
+	{/if}
+    <form class="new" method="POST" action="?/addNew" use:enhance>
         <label for="new-list"> Add new list</label>
         <input 
         id = "new-list" 
-        name="list" 
+        name="a" 
         type="text" 
-        bind:value={newList}
-        required
+        value={form?.list ?? ''}
+        
         autofocus
         />
         <button>Add list</button> 
