@@ -1,5 +1,6 @@
 <script>
-import { enhance } from '$app/forms';
+import {enhance} from '$app/forms';
+import Kauppalista from '../lib/components/Kauppalista.svelte';
    
     export let data; 
     export let form;
@@ -8,14 +9,7 @@ import { enhance } from '$app/forms';
 
 <div class komponentti>
 <h1>Kauppalista</h1>
-    <ul>
-        {#each data.lists as list}
-        <li>
-            <input type="checkbox" />
-            {list}
-        </li>
-        {/each}
-    </ul>
+   <Kauppalista lists={data.lists} />
     {#if form?.error}
 		<p class="error">{form.error}</p>
 	{/if}
@@ -39,14 +33,9 @@ import { enhance } from '$app/forms';
         color:blue;
         font-size: 200%;
     }
-    ul {
-        color: #8a2be2;
-        background-color: rgba(96, 224, 213, 0.556);
-        font-size: 100%;
-        
-    }
+    
 
-    label, li {
+    label {
         display: block;
         padding-top: 10px ; 
     }
