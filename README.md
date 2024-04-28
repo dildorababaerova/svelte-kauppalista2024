@@ -82,7 +82,7 @@ U+1F7AC (128940) 	&#x1F7AC; 	🞬 	HEAVY SALTIRE (1,2) 	Fettes Andreaskreuz
 
 
 
-
+trashbin emoji unicode :sta voidaan löytää kuvia
 
 
 
