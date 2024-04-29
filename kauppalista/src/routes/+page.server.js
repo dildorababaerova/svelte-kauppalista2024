@@ -1,5 +1,5 @@
 import { fail } from '@sveltejs/kit';
-import {lataaKauppalista, luoKauppalistanAsia} from '$lib/api';
+import {lataaKauppalista, luoKauppalistanAsia, deleteList} from '$lib/api';
 
 const LISTA_ID = '676dcru6dxt8bjh';
 
@@ -18,4 +18,11 @@ export const actions = {
 		} catch(error) { 
 		}
 	},
+
+	delete: async ({ request }) => {
+		const data = await request.formData();
+		deleteList(data.get('asia-id'));
+
+	}
+
 };

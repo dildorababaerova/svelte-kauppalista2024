@@ -2,14 +2,14 @@
 import {enhance} from '$app/forms';
 import Kauppalista from '../lib/components/Kauppalista.svelte';
    
-    export let data; 
-    export let form;
+export let data; 
+export let form;
 
 </script>
 
 <div class komponentti>
-<h1>Kauppalista</h1>
-   <Kauppalista lists={data.lists} />
+    <h1>Kauppalista</h1>
+    <Kauppalista lists={data.lists} />
     {#if form?.error}
 		<p class="error">{form.error}</p>
 	{/if}
@@ -20,12 +20,10 @@ import Kauppalista from '../lib/components/Kauppalista.svelte';
         name="a" 
         type="text" 
         value={form?.list ?? ''}
-        
         autofocus
         />
         <button>Add list</button> 
     </form> 
-    
 </div>
 <style>
     h1 {

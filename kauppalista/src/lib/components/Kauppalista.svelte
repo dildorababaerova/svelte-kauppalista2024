@@ -5,7 +5,7 @@
 
 <ul>
     {#each lists as list}
-        <Asia teksti={list} />
+        <Asia teksti={list.teksti} id={list.id} />
     {/each}
 </ul> 
 <style>
